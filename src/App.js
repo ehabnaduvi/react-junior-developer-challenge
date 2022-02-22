@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Headet from "./Components/Header";
+import App_Header from "./Components/Header";
 import ImgPage from "./Components/ImgPage";
 import "./App.css";
 import Home from "./Components/Home";
@@ -13,7 +13,7 @@ function App() {
     <>
       <ImageProvider>
         <Router>
-          <Headet />
+          <App_Header />
           <Routes>
             <Route path="/" element={<Home />}></Route>
           </Routes>
@@ -21,7 +21,7 @@ function App() {
             <Route path="/photos" element={<ImgPage />}></Route>
           </Routes>
         </Router>
-        <Footer></Footer>
+        <Footer/>
       </ImageProvider>
     </>
   );
